@@ -49,7 +49,7 @@ export default function PageComponents() {
         <div className='flex gap-2'>
           <Button icon={PlusIcon}>New task</Button>
           <Button icon={PlusIcon} handling>
-            Criando...
+            Creating...
           </Button>
         </div>
 
