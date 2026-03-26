@@ -1,75 +1,156 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**Todo App** is a simple task management application created to demonstrate fundamental frontend concepts and good user experience practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application allows users to create, view, and delete tasks, helping with basic organization and productivity in day-to-day activities.
 
-## React Compiler
+Although it does not use a real backend, the project simulates API behavior using **asynchronous functions**, including loading states during actions like task deletion. This provides a more realistic user experience, similar to real-world applications that depend on external services.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Additionally, the project includes a second screen that showcases the **UI components used throughout the application**, making it useful as a reference for component structure and reuse.
 
-Note: This will impact Vite dev & build performances.
+This project was built as a **beginner-friendly application**, focusing on clean structure, usability, and frontend fundamentals.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Frontend
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* React
+* TypeScript
+* Vite
+* TailwindCSS
+* React Router
+* Class Variance Authority
+* Local Storage (via use-local-storage-state)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+# Features
+
+* Create and delete tasks
+* Persistent data using **localStorage**
+* Simulated API calls using **async functions**
+* Loading states for actions (e.g., delete task)
+* Component showcase page
+* Simple and clean UI
+
+---
+
+# Prerequisites
+
+To run this project locally, you must install the following tools.
+
+## 1. Install Git
+
+Git is used to clone the repository.
+
+Download:
+https://git-scm.com/downloads
+
+After installation, verify:
+
+```bash
+git --version
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 2. Install Node.js
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Download Node.js (LTS version recommended):
+
+https://nodejs.org/
+
+Recommended version:
+
 ```
+Node.js >= 18
+```
+
+After installation, verify:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+# Clone the Repository
+
+Open your terminal and run:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/todo.git
+```
+
+Then navigate to the project folder:
+
+```bash
+cd todo
+```
+
+---
+
+# Setup
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Start the Application
+
+```bash
+npm run dev
+```
+
+After running the command, Vite will display a local development URL such as:
+
+```
+http://localhost:5173
+```
+
+Open this address in your browser.
+
+---
+
+# Available Scripts
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+Lint project:
+
+```bash
+npm run lint
+```
+
+---
+
+# Author
+
+Developed by **Thiago Morato**
+
+Frontend Engineer specialized in **React and TypeScript**, focused on building scalable and maintainable applications.
